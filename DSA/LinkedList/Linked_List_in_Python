@@ -1,0 +1,150 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "gpuType": "T4",
+      "authorship_tag": "ABX9TyP8+meQ9W4QlEziDTO/N8EF",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    },
+    "accelerator": "GPU"
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/prashantiyaramareddy/AI-ML-Learnings/blob/master/DSA/LinkedList/Linked_List_in_Python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Simple Linked List implementation in Python"
+      ],
+      "metadata": {
+        "id": "YAl8RCkR92oU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Node:\n",
+        "    def __init__(self, k):\n",
+        "        self.key = k\n",
+        "        self.next = None\n",
+        "\n",
+        "\n",
+        "temp1 = Node(10)\n",
+        "temp2 = Node(20)\n",
+        "temp3 = Node(30)\n",
+        "\n",
+        "temp1.next = temp2\n",
+        "temp2.next = temp3\n",
+        "\n",
+        "head = temp1\n",
+        "print(head.key)\n",
+        "print(head.next.key)\n",
+        "print(head.next.next.key)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0PAHbD9QABUd",
+        "outputId": "3cbf87ba-4c21-4648-e431-8b60f1ae6417"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n",
+            "20\n",
+            "30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Tranversal of LinkedLIst"
+      ],
+      "metadata": {
+        "id": "daC1IHLRtOwa"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Node:\n",
+        "    def __init__(self, key):\n",
+        "        self.key = key\n",
+        "        self.next = None\n",
+        "\n",
+        "\n",
+        "def printList(head):\n",
+        "    curr = head\n",
+        "    while curr!= None:\n",
+        "        print(curr.key)\n",
+        "        curr = curr.next\n",
+        "\n",
+        "\n",
+        "head = Node(10)\n",
+        "head.next = Node(20)\n",
+        "head.next.next = Node(15)\n",
+        "head.next.next.next = Node(30)\n",
+        "printList(head)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "F26ZHrtaOXT6",
+        "outputId": "1aec602e-6347-485f-a9e0-30506c020cd9"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n",
+            "20\n",
+            "15\n",
+            "30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Time Complexity: Worst and Average Case\n",
+        "\n",
+        "*   Search   - O(n)\n",
+        "*   Insert   - O(n)\n",
+        "*   Deletion - O(n)\n",
+        "\n",
+        "Auxillary Space: O(1)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "K-oze11gOh09"
+      }
+    }
+  ]
+}
